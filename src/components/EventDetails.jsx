@@ -57,7 +57,7 @@ function EventDetails() {
 
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/events/${eventId}`,
+          `https://easyfest.onrender.com/api/events/${eventId}`,
           { headers: { Accept: "application/json" } }
         );
         setEvent(response.data);
@@ -91,7 +91,7 @@ function EventDetails() {
     setRegistering(true);
     try {
       await axios.post(
-        "http://localhost:8080/api/registrations",
+        "https://easyfest.onrender.com/api/registrations",
         { studentId, eventId },
         {
           headers: {

@@ -94,7 +94,7 @@ function StudentRegister() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/auth/students",
+        "https://easyfest.onrender.com/auth/students",
         formData
       );
 

@@ -53,7 +53,7 @@ function StudentDashboard() {
     const fetchEvents = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:8080/api/events", {
+        const response = await axios.get("https://easyfest.onrender.com/api/events", {
           headers: { Accept: "application/json" },
         });
 
@@ -127,7 +127,7 @@ function StudentDashboard() {
 
     try {
       await axios.post(
-        "http://localhost:8080/api/registrations",
+        "https://easyfest.onrender.com/api/registrations",
         { studentId, eventId },
         {
           headers: {

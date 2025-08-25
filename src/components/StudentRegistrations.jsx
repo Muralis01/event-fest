@@ -55,7 +55,7 @@ function StudentRegistrations() {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://localhost:8080/api/registrations/students/${studentId}`,
+          `https://easyfest.onrender.com/api/registrations/students/${studentId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
             signal: controller.signal,
@@ -141,7 +141,7 @@ function StudentRegistrations() {
 
     try {
       await axios.delete(
-        `http://localhost:8080/api/registrations/${registrationId}`,
+        `https://easyfest.onrender.com/api/registrations/${registrationId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
